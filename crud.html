@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Útiles Escolares</title>
+
+```
+<!-- Hoja de estilos principal -->
+<link rel="stylesheet" href="css/estilos.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- ==========================================
+     ENCABEZADO Y NAVEGACIÓN
+=========================================== -->
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <h1>Mochila Interactiva Infantil</h1>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="index.html">Prototipo</a>
+            </li>
+
+            <li>
+                <a href="crud.html" class="activo">
+                    Inventario (CRUD)
+                </a>
+            </li>
+
+            <li>
+                <a href="integrantes.html">
+                    Equipo (CRUD)
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+</header>
+
+<!-- ==========================================
+     CONTENIDO PRINCIPAL
+=========================================== -->
+<main class="crud-contenedor">
+
+    <!-- ======================================
+         FORMULARIO DE REGISTRO
+    ======================================= -->
+    <section class="formulario-panel">
+
+        <h2>Registrar Nuevo Elemento</h2>
+
+        <form id="formUtil">
+
+            <div class="grupo-form">
+
+                <label for="nombre">
+                    Nombre del elemento
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ejemplo: Cuaderno Cuadriculado">
+
+            </div>
+
+            <div class="grupo-form">
+
+                <label for="emoji">
+                    Icono del elemento
+                </label>
+
+                <input
+                    type="text"
+                    id="emoji"
+                    name="emoji"
+                    placeholder="📔">
+
+            </div>
+
+            <div class="grupo-form">
+
+                <label for="tipo">
+                    Tipo de elemento
+                </label>
+
+                <select id="tipo" name="tipo">
+
+                    <option value="util">
+                        Útil Escolar
+                    </option>
+
+                    <option value="distractor">
+                        Distractor
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo-form">
+
+                <label for="puntos">
+                    Puntuación
+                </label>
+
+                <input
+                    type="number"
+                    id="puntos"
+                    name="puntos"
+                    value="1">
+
+            </div>
+
+            <button type="submit" class="btn-guardar">
+                Guardar Registro
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- ======================================
+         TABLA DE INVENTARIO
+    ======================================= -->
+    <section class="tabla-panel">
+
+        <div class="tabla-header">
+            <h2>Inventario de Útiles Escolares</h2>
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Icono</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Puntos</th>
+                    <th>Acciones</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaUtiles">
+
+                <!-- Registro de ejemplo -->
+
+                <tr>
+
+                    <td>📔</td>
+
+                    <td>
+                        Cuaderno Cuadriculado
+                    </td>
+
+                    <td>
+                        Útil Escolar
+                    </td>
+
+                    <td>
+                        1
+                    </td>
+
+                    <td>
+
+                        <button
+                            type="button"
+                            class="btn-editar">
+
+                            Editar
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-eliminar">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>🍎</td>
+
+                    <td>
+                        Manzana Saludable
+                    </td>
+
+                    <td>
+                        Útil Escolar
+                    </td>
+
+                    <td>
+                        1
+                    </td>
+
+                    <td>
+
+                        <button
+                            type="button"
+                            class="btn-editar">
+
+                            Editar
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-eliminar">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>🎮</td>
+
+                    <td>
+                        Consola Nintendo Switch
+                    </td>
+
+                    <td>
+                        Distractor
+                    </td>
+
+                    <td>
+                        -2
+                    </td>
+
+                    <td>
+
+                        <button
+                            type="button"
+                            class="btn-editar">
+
+                            Editar
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-eliminar">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<!-- Archivo JavaScript principal -->
+<script src="js/principal.js"></script>
+```
+
+</body>
+
+</html>
