@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -7,19 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario de Útiles Escolares</title>
 
-```
-<!-- Hoja de estilos principal -->
-<link rel="stylesheet" href="css/estilos.css">
-```
-
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-```
-<!-- ==========================================
-     ENCABEZADO Y NAVEGACIÓN
-=========================================== -->
 <header>
     <nav class="navbar">
 
@@ -28,39 +19,35 @@
         </div>
 
         <ul class="menu">
+
             <li>
-    <a href="index.html">
-        <img src="imgs/iconos/prototipo.png" alt="Prototipo">
-        Prototipo
-    </a>
-</li>
+                <a href="index.html">
+                    <img src="imgs/iconos/prototipo.png" alt="Prototipo">
+                    Prototipo
+                </a>
+            </li>
 
-<li>
-    <a href="crud.html" class="activo">
-        <img src="imgs/iconos/inventario.png" alt="Inventario">
-        Inventario (CRUD)
-    </a>
-</li>
+            <li>
+                <a href="crud.html" class="activo">
+                    <img src="imgs/iconos/inventario.png" alt="Inventario">
+                    Inventario (CRUD)
+                </a>
+            </li>
 
-<li>
-    <a href="integrantes.html">
-        <img src="imgs/iconos/equipo.png" alt="Equipo">
-        Equipo (CRUD)
-    </a>
-</li>
+            <li>
+                <a href="integrantes.html">
+                    <img src="imgs/iconos/equipo.png" alt="Equipo">
+                    Equipo (CRUD)
+                </a>
+            </li>
+
         </ul>
 
     </nav>
 </header>
 
-<!-- ==========================================
-     CONTENIDO PRINCIPAL
-=========================================== -->
 <main class="crud-contenedor">
 
-    <!-- ======================================
-         FORMULARIO DE REGISTRO
-    ======================================= -->
     <section class="formulario-panel">
 
         <h2>Registrar Nuevo Elemento</h2>
@@ -68,46 +55,33 @@
         <form id="formUtil">
 
             <div class="grupo-form">
-
-                <label for="nombre">
-                    Nombre del elemento
-                </label>
+                <label for="nombre">Nombre del elemento</label>
 
                 <input
                     type="text"
                     id="nombre"
-                    name="nombre"
                     placeholder="Ejemplo: Cuaderno Cuadriculado">
-
             </div>
 
             <div class="grupo-form">
-
-                <label for="emoji">
-                    Icono del elemento
-                </label>
+                <label for="emoji">Icono del elemento</label>
 
                 <input
                     type="text"
                     id="emoji"
-                    name="emoji"
                     placeholder="📔">
-
             </div>
 
             <div class="grupo-form">
+                <label for="tipo">Tipo de elemento</label>
 
-                <label for="tipo">
-                    Tipo de elemento
-                </label>
+                <select id="tipo">
 
-                <select id="tipo" name="tipo">
-
-                    <option value="util">
+                    <option value="Útil Escolar">
                         Útil Escolar
                     </option>
 
-                    <option value="distractor">
+                    <option value="Distractor">
                         Distractor
                     </option>
 
@@ -116,17 +90,12 @@
             </div>
 
             <div class="grupo-form">
-
-                <label for="puntos">
-                    Puntuación
-                </label>
+                <label for="puntos">Puntuación</label>
 
                 <input
                     type="number"
                     id="puntos"
-                    name="puntos"
                     value="1">
-
             </div>
 
             <button type="submit" class="btn-guardar">
@@ -137,14 +106,9 @@
 
     </section>
 
-    <!-- ======================================
-         TABLA DE INVENTARIO
-    ======================================= -->
     <section class="tabla-panel">
 
-        <div class="tabla-header">
-            <h2>Inventario de Útiles Escolares</h2>
-        </div>
+        <h2>Inventario de Útiles Escolares</h2>
 
         <table>
 
@@ -162,122 +126,6 @@
 
             <tbody id="tablaUtiles">
 
-                <!-- Registro de ejemplo -->
-
-                <tr>
-
-                    <td>📔</td>
-
-                    <td>
-                        Cuaderno Cuadriculado
-                    </td>
-
-                    <td>
-                        Útil Escolar
-                    </td>
-
-                    <td>
-                        1
-                    </td>
-
-                    <td>
-
-                        <button
-                            type="button"
-                            class="btn-editar">
-
-                            Editar
-
-                        </button>
-
-                        <button
-                            type="button"
-                            class="btn-eliminar">
-
-                            Eliminar
-
-                        </button>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>🍎</td>
-
-                    <td>
-                        Manzana Saludable
-                    </td>
-
-                    <td>
-                        Útil Escolar
-                    </td>
-
-                    <td>
-                        1
-                    </td>
-
-                    <td>
-
-                        <button
-                            type="button"
-                            class="btn-editar">
-
-                            Editar
-
-                        </button>
-
-                        <button
-                            type="button"
-                            class="btn-eliminar">
-
-                            Eliminar
-
-                        </button>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>🎮</td>
-
-                    <td>
-                        Consola Nintendo Switch
-                    </td>
-
-                    <td>
-                        Distractor
-                    </td>
-
-                    <td>
-                        -2
-                    </td>
-
-                    <td>
-
-                        <button
-                            type="button"
-                            class="btn-editar">
-
-                            Editar
-
-                        </button>
-
-                        <button
-                            type="button"
-                            class="btn-eliminar">
-
-                            Eliminar
-
-                        </button>
-
-                    </td>
-
-                </tr>
-
             </tbody>
 
         </table>
@@ -286,9 +134,8 @@
 
 </main>
 
-<!-- ==========================================
-     MODAL EDITAR
-=========================================== -->
+<!-- MODAL EDITAR -->
+
 <div class="modal" id="modalEditar">
 
     <div class="modal-contenido">
@@ -305,23 +152,28 @@
             id="editarPuntos"
             placeholder="Puntos">
 
-        <button class="btn-guardar">
+        <button
+            class="btn-guardar"
+            onclick="guardarEdicionUtil()">
+
             Actualizar
+
         </button>
 
         <button
             type="button"
             onclick="cerrarModal('modalEditar')">
+
             Cancelar
+
         </button>
 
     </div>
 
 </div>
 
-<!-- ==========================================
-     MODAL ELIMINAR
-=========================================== -->
+<!-- MODAL ELIMINAR -->
+
 <div class="modal" id="modalEliminar">
 
     <div class="modal-contenido">
@@ -334,52 +186,29 @@
             Esta acción no se puede deshacer.
         </p>
 
-        <button class="btn-eliminar">
+        <button
+            class="btn-eliminar"
+            onclick="confirmarEliminarUtil()">
+
             Sí, eliminar
+
         </button>
 
         <button
             type="button"
             onclick="cerrarModal('modalEliminar')">
+
             Cancelar
+
         </button>
 
     </div>
 
 </div>
 
-<!-- ==========================================
-     MODAL FELICITACIÓN
-=========================================== -->
-<div class="modal" id="modalFelicitacion">
+<div id="mensaje"></div>
 
-    <div class="modal-contenido felicitacion">
-
-        <h1>🎒✨</h1>
-
-        <h2>
-            ¡Mochila lista y perfecta!
-        </h2>
-
-        <p>
-            Has seleccionado correctamente
-            todos los útiles escolares.
-        </p>
-
-        <button
-            class="btn-guardar"
-            onclick="cerrarModal('modalFelicitacion')">
-            Continuar
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Archivo JavaScript principal -->
 <script src="js/principal.js"></script>
-```
 
 </body>
-
 </html>
