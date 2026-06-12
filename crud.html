@@ -281,6 +281,96 @@
 
 </main>
 
+<!-- ==========================================
+     MODAL EDITAR
+=========================================== -->
+<div class="modal" id="modalEditar">
+
+    <div class="modal-contenido">
+
+        <h2>Editar Registro</h2>
+
+        <input
+            type="text"
+            id="editarNombre"
+            placeholder="Nombre">
+
+        <input
+            type="number"
+            id="editarPuntos"
+            placeholder="Puntos">
+
+        <button class="btn-guardar">
+            Actualizar
+        </button>
+
+        <button
+            type="button"
+            onclick="cerrarModal('modalEditar')">
+            Cancelar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+     MODAL ELIMINAR
+=========================================== -->
+<div class="modal" id="modalEliminar">
+
+    <div class="modal-contenido">
+
+        <h2>
+            ¿Desea eliminar este registro?
+        </h2>
+
+        <p>
+            Esta acción no se puede deshacer.
+        </p>
+
+        <button class="btn-eliminar">
+            Sí, eliminar
+        </button>
+
+        <button
+            type="button"
+            onclick="cerrarModal('modalEliminar')">
+            Cancelar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+     MODAL FELICITACIÓN
+=========================================== -->
+<div class="modal" id="modalFelicitacion">
+
+    <div class="modal-contenido felicitacion">
+
+        <h1>🎒✨</h1>
+
+        <h2>
+            ¡Mochila lista y perfecta!
+        </h2>
+
+        <p>
+            Has seleccionado correctamente
+            todos los útiles escolares.
+        </p>
+
+        <button
+            class="btn-guardar"
+            onclick="cerrarModal('modalFelicitacion')">
+            Continuar
+        </button>
+
+    </div>
+
+</div>
+
 <!-- Archivo JavaScript principal -->
 <script src="js/principal.js"></script>
 ```

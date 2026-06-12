@@ -39,11 +39,11 @@ let integrantes = [
   },
   {
     id: 5,
-    nombre: "Nombre Completo",
-    codigo: "AR000000",
-    expediente: "EX005",
+    nombre: "Martha Daniela Murga Cubias",
+    codigo: "MC24-I04-001",
+    expediente: "27874",
     rol: "Integración y Pruebas",
-    foto: "imgs/equipo/integrante05.jpg"
+    foto: "imgs/equipo/MarthaDanielaMurgaCubias.jpeg"
   }
 ];
 
