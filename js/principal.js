@@ -230,18 +230,176 @@ function permitirDrop(event) {
 }
 
 function soltarUtil(event) {
-  event.preventDefault();
 
-  const nombre = event.dataTransfer.getData("text");
+    event.preventDefault();
 
-  if (mochila.includes(nombre)) {
-    mostrarMensaje("Ya está en la mochila", "error");
-    return;
-  }
+    const nombre =
+        event.dataTransfer.getData("text");
 
-  mochila.push(nombre);
+    if (mochila.includes(nombre)) {
 
-  mostrarMensaje(nombre + " agregado a la mochila", "exito");
+        mostrarMensaje(
+            "Ese útil ya está en la mochila",
+            "error"
+        );
 
-  console.log("Mochila:", mochila);
+        return;
+    }
+
+    mochila.push(nombre);
+
+    const zona =
+        document.getElementById("zonaDrop");
+
+    if (mochila.length === 1) {
+        zona.innerHTML = "";
+    }
+
+    const item =
+        document.createElement("div");
+
+    item.classList.add("item-mochila");
+
+    item.innerHTML = `
+    ${nombre}
+    <button onclick="quitarUtil('${nombre}')">❌</button>
+`;
+
+    zona.appendChild(item);
+
+    actualizarPuntaje();
+
+    mostrarMensaje(
+        nombre + " agregado a la mochila",
+        "exito"
+    );
+}
+function actualizarPuntaje() {
+
+    let puntos = 0;
+
+    mochila.forEach(item => {
+
+        if(item === "Consola Nintendo Switch"){
+            puntos -= 10;
+        }else{
+            puntos += 10;
+        }
+
+    });
+
+    const lblPuntaje =
+        document.getElementById("puntaje");
+
+    if(lblPuntaje){
+        lblPuntaje.textContent =
+            puntos + " Pts";
+    }
+}
+
+function validarMochila() {
+
+    const utilesCorrectos = [
+        "Cuaderno Cuadriculado",
+        "Manzana Saludable",
+        "Estuche de Colores"
+    ];
+
+    const tieneTodos =
+        utilesCorrectos.every(
+            util => mochila.includes(util)
+        );
+
+    const tieneDistractor =
+        mochila.includes("Consola Nintendo Switch");
+
+    if (tieneTodos && !tieneDistractor) {
+
+        mostrarMensaje(
+            "🎉 Mochila lista y perfecta 🎉",
+            "exito"
+        );
+
+    } else {
+
+        mostrarMensaje(
+            "❌ Revisa los útiles de la mochila",
+            "error"
+        );
+
+    }
+}
+function validarMochila() {
+
+    const utilesCorrectos = [
+        "Cuaderno Cuadriculado",
+        "Manzana Saludable",
+        "Estuche de Colores"
+    ];
+
+    const tieneTodos = utilesCorrectos.every(
+        util => mochila.includes(util)
+    );
+
+    const tieneDistractor =
+        mochila.includes("Consola Nintendo Switch");
+
+    if (tieneTodos && !tieneDistractor) {
+
+        mostrarMensaje(
+            "🎉 Mochila lista y perfecta 🎉",
+            "exito"
+        );
+
+    } else {
+
+        mostrarMensaje(
+            "❌ Revisa los útiles de la mochila",
+            "error"
+        );
+
+    }
+}
+function quitarUtil(nombre) {
+
+    mochila = mochila.filter(
+        item => item !== nombre
+    );
+
+    const zona =
+        document.getElementById("zonaDrop");
+
+    zona.innerHTML = "";
+
+    if (mochila.length === 0) {
+
+        zona.innerHTML =
+            "<p>Arrastra los útiles aquí</p>";
+
+    } else {
+
+        mochila.forEach(item => {
+
+            const div =
+                document.createElement("div");
+
+            div.classList.add("item-mochila");
+
+            div.innerHTML = `
+                ${item}
+                <button onclick="quitarUtil('${item}')">
+                    ❌
+                </button>
+            `;
+
+            zona.appendChild(div);
+        });
+    }
+
+    actualizarPuntaje();
+
+    mostrarMensaje(
+        nombre + " eliminado",
+        "error"
+    );
 }

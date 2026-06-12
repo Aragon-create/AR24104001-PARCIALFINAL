@@ -464,3 +464,67 @@ td{
 .felicitacion h2{
     color:gold;
 }
+.item-mochila{
+    background:var(--color-principal);
+
+    color:white;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    margin:5px;
+
+    font-weight:bold;
+}
+
+.zona-drop{
+    display:flex;
+    flex-wrap:wrap;
+    align-content:flex-start;
+    gap:10px;
+    padding:15px;
+}
+.mensaje{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+
+    z-index: 99999;
+}
+
+.mensaje.exito{
+    background: #22c55e;
+}
+
+.mensaje.error{
+    background: #ef4444;
+}
+.item-mochila{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#334155;
+
+    margin:5px;
+    padding:10px;
+
+    border-radius:8px;
+}
+
+.item-mochila button{
+    background:#ef4444;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    padding:4px 8px;
+}

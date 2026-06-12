@@ -11,128 +11,138 @@
 
 <body>
 
-<!-- ENCABEZADO -->
-<header>
-    <nav class="navbar">
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
 
-        <div class="logo">
-            <h1>MOCHILA INTERACTIVA INFANTIL</h1>
-        </div>
-
-        <ul class="menu">
-
-    <li>
-        <a href="index.html" class="activo">
-            <img src="imgs/iconos/prototipo.png" alt="Prototipo">
-            Prototipo
-        </a>
-    </li>
-
-    <li>
-        <a href="crud.html">
-            <img src="imgs/iconos/inventario.png" alt="Inventario">
-            Inventario (CRUD)
-        </a>
-    </li>
-
-    <li>
-        <a href="integrantes.html">
-            <img src="imgs/iconos/equipo.png" alt="Equipo">
-            Equipo (CRUD)
-        </a>
-    </li>
-
-</ul>
-
-    </nav>
-</header>
-
-<!-- CONTENIDO PRINCIPAL -->
-<main class="contenedor-principal">
-
-    <!-- ÚTILES -->
-    <section class="utiles-section">
-
-        <h2>🖍️ ÚTILES EN LA MESA DE TRABAJO</h2>
-
-        <div class="contenedor-utiles">
-
-            <article class="tarjeta-util"
-                draggable="true"
-                ondragstart="iniciarDrag(event)"
-                data-nombre="Cuaderno Cuadriculado">
-
-                <div class="emoji">📔</div>
-                <h3>Cuaderno Cuadriculado</h3>
-                <span class="etiqueta util">ÚTIL</span>
-            </article>
-
-            <article class="tarjeta-util"
-                draggable="true"
-                ondragstart="iniciarDrag(event)"
-                data-nombre="Manzana Saludable">
-
-                <div class="emoji">🍎</div>
-                <h3>Manzana Saludable</h3>
-                <span class="etiqueta util">ÚTIL</span>
-            </article>
-
-            <article class="tarjeta-util"
-                draggable="true"
-                ondragstart="iniciarDrag(event)"
-                data-nombre="Consola Nintendo Switch">
-
-                <div class="emoji">🎮</div>
-                <h3>Consola Nintendo Switch</h3>
-                <span class="etiqueta distractor">DISTRACTOR</span>
-            </article>
-
-            <article class="tarjeta-util"
-                draggable="true"
-                ondragstart="iniciarDrag(event)"
-                data-nombre="Estuche de Colores">
-
-                <div class="emoji">🖍️</div>
-                <h3>Estuche de Colores</h3>
-                <span class="etiqueta util">ÚTIL</span>
-            </article>
-
-        </div>
-
-    </section>
-
-    <!-- MOCHILA -->
-    <aside class="mochila-panel">
-
-        <h2>Mi Mochila Escolar (Drop)</h2>
-
-        <div id="zonaDrop"
-             class="zona-drop"
-             ondragover="permitirDrop(event)"
-             ondrop="soltarUtil(event)">
-
-            <p>Arrastra los útiles aquí</p>
-
-        </div>
-
-        <div class="puntaje-container">
-
-            <div class="puntaje-header">
-                <span>Puntaje Escolar:</span>
-                <span id="puntaje">0 Pts</span>
+            <div class="logo">
+                <h1>MOCHILA INTERACTIVA INFANTIL</h1>
             </div>
 
-            <button id="btnValidar">
-                Validar Mochila
-            </button>
+            <ul class="menu">
 
-        </div>
+                <li>
+                    <a href="index.html" class="activo">
+                        <img src="imgs/iconos/prototipo.png" alt="Prototipo">
+                        Prototipo
+                    </a>
+                </li>
 
-    </aside>
+                <li>
+                    <a href="crud.html">
+                        <img src="imgs/iconos/inventario.png" alt="Inventario">
+                        Inventario (CRUD)
+                    </a>
+                </li>
 
-</main>
+                <li>
+                    <a href="integrantes.html">
+                        <img src="imgs/iconos/equipo.png" alt="Equipo">
+                        Equipo (CRUD)
+                    </a>
+                </li>
 
-<script src="js/principal.js"></script>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor-principal">
+
+        <!-- ÚTILES -->
+        <section class="utiles-section">
+
+            <h2>🖍️ ÚTILES EN LA MESA DE TRABAJO</h2>
+
+            <div class="contenedor-utiles">
+
+                <article class="tarjeta-util"
+                    draggable="true"
+                    ondragstart="iniciarDrag(event)"
+                    data-nombre="Cuaderno Cuadriculado">
+
+                    <div class="emoji">📔</div>
+                    <h3>Cuaderno Cuadriculado</h3>
+                    <span class="etiqueta util">ÚTIL</span>
+
+                </article>
+
+                <article class="tarjeta-util"
+                    draggable="true"
+                    ondragstart="iniciarDrag(event)"
+                    data-nombre="Manzana Saludable">
+
+                    <div class="emoji">🍎</div>
+                    <h3>Manzana Saludable</h3>
+                    <span class="etiqueta util">ÚTIL</span>
+
+                </article>
+
+                <article class="tarjeta-util"
+                    draggable="true"
+                    ondragstart="iniciarDrag(event)"
+                    data-nombre="Consola Nintendo Switch">
+
+                    <div class="emoji">🎮</div>
+                    <h3>Consola Nintendo Switch</h3>
+                    <span class="etiqueta distractor">DISTRACTOR</span>
+
+                </article>
+
+                <article class="tarjeta-util"
+                    draggable="true"
+                    ondragstart="iniciarDrag(event)"
+                    data-nombre="Estuche de Colores">
+
+                    <div class="emoji">🖍️</div>
+                    <h3>Estuche de Colores</h3>
+                    <span class="etiqueta util">ÚTIL</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- MOCHILA -->
+        <aside class="mochila-panel">
+
+            <h2>Mi Mochila Escolar (Drop)</h2>
+
+            <div id="zonaDrop"
+                class="zona-drop"
+                ondragover="permitirDrop(event)"
+                ondrop="soltarUtil(event)">
+
+                <p>Arrastra los útiles aquí</p>
+
+            </div>
+
+            <div class="puntaje-container">
+
+                <div class="puntaje-header">
+                    <span>Puntaje Escolar:</span>
+                    <span id="puntaje">0 Pts</span>
+                </div>
+
+                <button
+    id="btnValidar"
+    onclick="validarMochila()">
+    Validar Mochila
+</button>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- MENSAJES -->
+    <div id="mensaje"></div>
+
+    <script src="js/principal.js"></script>
 
 </body>
+
 </html>
