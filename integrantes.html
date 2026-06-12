@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -7,21 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo de Desarrollo</title>
 
-```
-<!-- Hoja de estilos principal -->
-<link rel="stylesheet" href="css/estilos.css">
-```
-
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-```
-<!-- ==========================================
-     ENCABEZADO Y NAVEGACIÓN
-=========================================== -->
 <header>
-
     <nav class="navbar">
 
         <div class="logo">
@@ -29,235 +19,78 @@
         </div>
 
         <ul class="menu">
-
-            <li>
-                <a href="index.html">
-                    Prototipo
-                </a>
-            </li>
-
-            <li>
-                <a href="crud.html">
-                    Inventario (CRUD)
-                </a>
-            </li>
-
-            <li>
-                <a href="integrantes.html" class="activo">
-                    Equipo (CRUD)
-                </a>
-            </li>
-
+            <li><a href="index.html">Prototipo</a></li>
+            <li><a href="crud.html">Inventario (CRUD)</a></li>
+            <li><a href="integrantes.html" class="activo">Equipo (CRUD)</a></li>
         </ul>
 
     </nav>
-
 </header>
 
-<!-- ==========================================
-     CONTENIDO PRINCIPAL
-=========================================== -->
-<main class="integrantes-contenedor">
+<main class="crud-contenedor">
 
-    <!-- ======================================
-         INFORMACIÓN DEL EQUIPO
-    ======================================= -->
-    <section class="equipo-section">
+    <!-- FORMULARIO -->
+    <section class="formulario-panel">
+        <h2>Registrar Nuevo Integrante</h2>
 
-        <h2>Equipo de Desarrollo</h2>
+        <form id="formIntegrante">
+            <div class="grupo-form">
+                <label>Nombre Completo</label>
+                <input type="text" id="intNombre" required>
+            </div>
 
-        <div class="contenedor-integrantes">
+            <div class="grupo-form">
+                <label>Código</label>
+                <input type="text" id="intCodigo" required>
+            </div>
 
-            <!-- Integrante 1 -->
-            <article class="tarjeta-integrante">
+            <div class="grupo-form">
+                <label>Expediente</label>
+                <input type="text" id="intExpediente" required>
+            </div>
 
-                <img
-                    src="imgs/equipo/integrante01.jpg"
-                    alt="Integrante 1">
+            <div class="grupo-form">
+                <label>Rol</label>
+                <input type="text" id="intRol" required>
+            </div>
 
-                <h3>Nombre Completo</h3>
+            <button type="submit" class="btn-guardar">
+                Guardar Integrante
+            </button>
+        </form>
+    </section>
 
-                <p>
-                    <strong>Código:</strong>
-                    AR241040
-                </p>
+    <!-- LISTA -->
+    <section class="tabla-panel" style="background: transparent; padding: 0; box-shadow: none;">
+        <div class="equipo-section">
+            <h2>Equipo de Desarrollo</h2>
 
-                <p>
-                    <strong>Expediente:</strong>
-                    EX001
-                </p>
-
-                <p>
-                    <strong>Rol:</strong>
-                    Líder del Proyecto
-                </p>
-
-                <div class="acciones">
-                    <button class="btn-editar">
-                        Editar
-                    </button>
-
-                    <button class="btn-eliminar">
-                        Eliminar
-                    </button>
-                </div>
-
-            </article>
-
-            <!-- Integrante 2 -->
-            <article class="tarjeta-integrante">
-
-                <img
-                    src="imgs/equipo/integrante02.jpg"
-                    alt="Integrante 2">
-
-                <h3>Nombre Completo</h3>
-
-                <p>
-                    <strong>Código:</strong>
-                    AR000000
-                </p>
-
-                <p>
-                    <strong>Expediente:</strong>
-                    EX002
-                </p>
-
-                <p>
-                    <strong>Rol:</strong>
-                    Drag & Drop
-                </p>
-
-                <div class="acciones">
-                    <button class="btn-editar">
-                        Editar
-                    </button>
-
-                    <button class="btn-eliminar">
-                        Eliminar
-                    </button>
-                </div>
-
-            </article>
-
-            <!-- Integrante 3 -->
-            <article class="tarjeta-integrante">
-
-                <img
-                    src="imgs/equipo/integrante03.jpg"
-                    alt="Integrante 3">
-
-                <h3>Nombre Completo</h3>
-
-                <p>
-                    <strong>Código:</strong>
-                    AR000000
-                </p>
-
-                <p>
-                    <strong>Expediente:</strong>
-                    EX003
-                </p>
-
-                <p>
-                    <strong>Rol:</strong>
-                    CRUD de Útiles
-                </p>
-
-                <div class="acciones">
-                    <button class="btn-editar">
-                        Editar
-                    </button>
-
-                    <button class="btn-eliminar">
-                        Eliminar
-                    </button>
-                </div>
-
-            </article>
-
-            <!-- Integrante 4 -->
-            <article class="tarjeta-integrante">
-
-                <img
-                    src="imgs/equipo/KarenDanielaPerezAlarcon.jpeg"
-                    alt="Integrante 4">
-
-                <h3> Karen Daniela Pérez Alarcón </h3>
-
-                <p>
-                    <strong>Código:</strong>
-                    PA24-I04-002
-                </p>
-
-                <p>
-                    <strong>Expediente:</strong>
-                    27243
-                </p>
-
-                <p>
-                    <strong>Rol:</strong>
-                    CRUD de Integrantes
-                </p>
-
-                <div class="acciones">
-                    <button class="btn-editar">
-                        Editar
-                    </button>
-
-                    <button class="btn-eliminar">
-                        Eliminar
-                    </button>
-                </div>
-
-            </article>
-
-            <!-- Integrante 5 -->
-            <article class="tarjeta-integrante">
-
-                <img
-                    src="imgs/equipo/integrante05.jpg"
-                    alt="Integrante 5">
-
-                <h3>Nombre Completo</h3>
-
-                <p>
-                    <strong>Código:</strong>
-                    AR000000
-                </p>
-
-                <p>
-                    <strong>Expediente:</strong>
-                    EX005
-                </p>
-
-                <p>
-                    <strong>Rol:</strong>
-                    Integración y Pruebas
-                </p>
-
-                <div class="acciones">
-                    <button class="btn-editar">
-                        Editar
-                    </button>
-
-                    <button class="btn-eliminar">
-                        Eliminar
-                    </button>
-                </div>
-
-            </article>
-
+            <div class="contenedor-integrantes" id="contenedorIntegrantes"></div>
         </div>
-
     </section>
 
 </main>
 
-<!-- Archivo JavaScript principal -->
 <script src="js/principal.js"></script>
-```
+<!-- =========================
+     MODAL EDITAR INTEGRANTE
+========================= -->
+<div id="modalEditar" class="modal" style="display:none;">
+    <div class="modal-contenido">
 
+        <h2>Editar Integrante</h2>
+
+        <input type="text" id="editNombre" placeholder="Nombre">
+        <input type="text" id="editRol" placeholder="Rol">
+
+        <div class="modal-acciones">
+            <button onclick="guardarEdicion()" class="btn-guardar">Guardar</button>
+            <button onclick="cerrarModal()" class="btn-eliminar">Cancelar</button>
+        </div>
+
+    </div>
+</div>
+<!-- CONTENEDOR DE MENSAJES -->
+<div id="mensaje" class="mensaje"></div>
 </body>
-
 </html>
