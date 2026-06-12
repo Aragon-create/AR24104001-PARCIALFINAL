@@ -55,14 +55,26 @@ body{
 .menu{
     list-style:none;
     display:flex;
-    gap:20px;
+    gap:40px;
 }
 
 .menu a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
     text-decoration:none;
     color:var(--color-texto);
     font-weight:bold;
     transition:.3s;
+}
+
+.menu a img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+
+    filter: brightness(0) invert(1);
 }
 
 .menu a:hover{
